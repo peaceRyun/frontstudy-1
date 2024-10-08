@@ -4,12 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>font | css</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Sixtyfour+Convergence&display=swap"
+            rel="stylesheet"
+        />
         <style>
             /* reset */
             html,
             body {
                 font-size: 20px;
                 /* 크롬브라우저가 사용하는 기본값 : 16px */
+                font-family: 'Sixtyfour Convergence', sans-serif;
             }
         </style>
     </head>
@@ -85,5 +90,13 @@
           부모 폰트 사이즈가 20px일 때, 2em = 40px -->
         <!-- rem : html, body를 기준으로 배수를 계산 
          기준이 변경되지 않는다-->
+
+        <!-- vw : viewport -->
+        <p class="txt4">안녕하세요.</p>
+        <style>
+            .txt4 {
+                font-size: 10vw;
+            }
+        </style>
     </body>
 </html>
