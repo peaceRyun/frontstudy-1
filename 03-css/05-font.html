@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>font | css</title>
+        <style>
+            /* reset */
+            html,
+            body {
+                font-size: 20px;
+                /* 크롬브라우저가 사용하는 기본값 : 16px */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>css</h1>
+        <h2>font</h2>
+
+        <!-- font-family : 글꼴 -->
+        <p class="txt1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, expedita corrupti fugit dolores voluptatum
+            delectus, consequatur eius ipsam temporibus dolorem perferendis aut dolore deserunt! Atque cum deserunt vero
+            et autem!
+        </p>
+        <style>
+            .txt1 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+        <hr />
+
+        <!-- 폰트 사이즈 -->
+        <!-- 절대 사이즈 : px-->
+        <p class="txt2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, molestiae?</p>
+        <style>
+            .txt2 {
+                font-size: 20px;
+            }
+        </style>
+
+        <!-- 상대 사이즈 : rem, em -->
+        <p class="txt3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, cum!</p>
+        <style>
+            .txt3 {
+                font-size: 1.25em;
+                color: brown;
+            }
+        </style>
+
+        <ul class="list1">
+            <li>안녕하세요</li>
+            <li><b>권윤구</b>입니다</li>
+            <li>졸립니다</li>
+            <li><b>프론트엔드</b> 공부하고 있어요</li>
+        </ul>
+        <style>
+            .list1 li:first-child {
+                font-size: 16px;
+            }
+            .list1 li:nth-child(2) {
+                font-size: 0.875em;
+            }
+            .list1 li:nth-child(2) b {
+                /* 18px * 2 = 32px */
+                font-size: 2em;
+            }
+            /* 3th 28px */
+            .list1 li:nth-child(3) {
+                font-size: 1.75em;
+            }
+            /* 4th 기준폰트 2배 */
+            .list1 li:nth-child(4) {
+                /* 40px */
+                font-size: 2em;
+            }
+
+            .list1 li:nth-child(4) b {
+                font-size: 2rem;
+            }
+        </style>
+
+        <!-- em : 부모를 기준으로 배수를 계산 -->
+        <!-- ex) 부모 폰트 사이즈가 20px일 때, 1em = 20px
+          부모 폰트 사이즈가 20px일 때, 2em = 40px -->
+        <!-- rem : html, body를 기준으로 배수를 계산 -->
+    </body>
+</html>

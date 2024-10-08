@@ -4,9 +4,78 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>text | css</title>
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
     </head>
     <body>
         <h1>css</h1>
         <h2>text</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate fuga sit ducimus nesciunt sed
+            recusandae est odit temporibus nostrum harum officia repellat at rerum vitae, tempore accusantium
+            dignissimos voluptatibus?
+        </p>
+
+        <style>
+            p {
+                color: violet;
+                text-align: left;
+            }
+        </style>
+
+        <div>
+            <img src="./images/youtube.png" alt="youtube" />
+            Youtube
+        </div>
+
+        <style>
+            div img {
+                vertical-align: middle;
+                margin-top: -5px;
+            }
+        </style>
+
+        <a href="#"
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae aperiam odio quasi amet ad eveniet.</a
+        >
+
+        <style>
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: -0.4px;
+                line-height: 1.5;
+                white-space: nowrap;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <button><span class="blind">로그인</span></button>
+
+        <style>
+            button {
+                width: 100px;
+                height: 100px;
+                background: pink;
+            }
+
+            .blind {
+                display: block;
+                text-indent: -9999px;
+            }
+
+            button::before {
+                display: inline-block;
+                content: '\f2f6';
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        </style>
     </body>
 </html>
