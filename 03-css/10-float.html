@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>float | css</title>
+    </head>
+    <body>
+        <h1>css</h1>
+        <h2>float</h2>
+
+        <div id="wrap">
+            <header class="clearfix">
+                <h1>logo</h1>
+                <nav>nav</nav>
+            </header>
+            <main>
+                <ul class="clearfix">
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                </ul>
+            </main>
+            <footer>footer</footer>
+        </div>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            ul li {
+                float: left;
+                margin-right: 25px;
+                border: 1px solid #000;
+                width: calc(20% - 20px);
+                box-sizing: border-box;
+                height: 200px;
+                background: blueviolet;
+            }
+            ul li:last-child {
+                margin-right: 0;
+            }
+
+            header {
+                /* overflow: hidden or auto; */
+                /* height: 100px; */
+                background: skyblue;
+            }
+            .clearfix::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            h1 {
+                float: left;
+            }
+            nav {
+                float: right;
+            }
+            main {
+                background: pink;
+            }
+            footer {
+                background: orange;
+            }
+        </style>
+    </body>
+</html>
