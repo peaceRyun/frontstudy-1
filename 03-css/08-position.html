@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>position | css</title>
+    </head>
+    <body>
+        <h1>css</h1>
+        <h2>position</h2>
+        <div class="rel">
+            <div class="sticky">나는 게시판 타이틀</div>
+        </div>
+        <style>
+            .sticky {
+                position: sticky;
+                top: 110px;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background: skyblue;
+            }
+        </style>
+        <!-- absolute -->
+        <div class="rel">
+            <div class="abs"></div>
+            <div class="abs2"></div>
+        </div>
+
+        <header>header</header>
+        <style>
+            body {
+                height: 200vh;
+            }
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9999;
+                width: 100%;
+                height: 100px;
+                background: pink;
+            }
+            .rel {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                background: burlywood;
+            }
+
+            .abs {
+                position: absolute;
+                top: 70px;
+                left: 160px;
+                z-index: 2;
+                width: 100px;
+                height: 100px;
+                background: blueviolet;
+            }
+            .abs2 {
+                position: absolute;
+                top: 100px;
+                left: 200px;
+                width: 200px;
+                height: 200px;
+                background: green;
+            }
+        </style>
+    </body>
+</html>
