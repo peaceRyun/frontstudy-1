@@ -8,6 +8,29 @@
     <body>
         <h1>css</h1>
         <h2>position</h2>
+
+        <!-- 완벽한 센터링 -->
+        <div class="center-wrap">
+            <div class="center">center</div>
+        </div>
+        <style>
+            .center-wrap {
+                position: relative;
+                height: 600px;
+                background: yellow;
+            }
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                /* margin: -100px 0 0 -100px; */
+                transform: translate(-50%, -50%);
+                width: 200px;
+                height: 200px;
+                background: red;
+            }
+        </style>
+
         <div class="rel">
             <div class="sticky">나는 게시판 타이틀</div>
         </div>
@@ -27,11 +50,12 @@
             <div class="abs2"></div>
         </div>
 
-        <header>header</header>
+        <!-- <header>header</header> -->
         <style>
             body {
                 height: 200vh;
             }
+            /* fixed의 기준은 무조건 body */
             header {
                 position: fixed;
                 top: 0;
