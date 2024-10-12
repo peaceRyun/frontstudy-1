@@ -19,13 +19,6 @@
 
         <h2>What Can JavaScript Do?</h2>
 
-        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
-        <img id="myImage" src="pic_bulboff.gif" style="width: 100px" />
-        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
-        <hr />
-
-        <h2>What Can JavaScript Do?</h2>
-
         <p id="demo1" style="color: red">Hello JavaScript!</p>
 
         <button type="button" onclick="document.getElementById('demo1').style.color = 'blue'">Click Me!</button>
@@ -44,5 +37,24 @@
 
         <button type="button" onclick="document.getElementById('demo3').style.display = 'block'">Click Me!</button>
         <hr />
+
+        <script>
+            let a = 1;
+
+            a += 2;
+            console.log(a); // 3
+
+            a -= 2;
+            console.log(a); // 1
+
+            a *= 2;
+            console.log(a); // 2
+
+            a /= 2;
+            console.log(a); // 1
+
+            a %= 2;
+            console.log(a); // 1
+        </script>
     </body>
 </html>

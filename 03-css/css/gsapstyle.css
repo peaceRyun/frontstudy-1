@@ -1,0 +1,14 @@
+body {
+    background: darkblue;
+}
+.box1 {
+    height: 2000px;
+}
+.box {
+    width: 300px;
+}
+.box2 svg {
+    width: 300px;
+    height: auto;
+    transform: rotateY(180deg);
+}
