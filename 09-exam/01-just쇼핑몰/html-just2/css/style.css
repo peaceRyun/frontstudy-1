@@ -37,21 +37,44 @@ header {
     right: 0;
 }
 
-#gnb dl {
-    min-width: 125px;
-}
-
-#gnb dl:hover dd {
+#gnb:hover::before {
     display: block;
 }
 
-#gnb dt a:hover {
+#gnb::before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 1200px;
+    height: 150px;
+    background: #fff;
+}
+
+#gnb dl {
+    position: relative;
+    z-index: 10;
+    min-width: 125px;
+}
+
+/* #gnb dl:hover dd 각 메뉴의 depth2만 열림 */
+/* 모든 depth2가 열림 */
+#gnb:hover dl dd {
+    display: block;
+}
+
+#gnb dl:hover dt a {
     color: red;
-    border-bottom: 2px solid red;
+}
+
+#gnb dl:hover dt a::after {
+    display: block;
 }
 
 #gnb dt a::after {
     content: '';
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -72,7 +95,8 @@ header {
     align-items: center;
     height: 100px;
     padding: 0 20px;
-    background: lightblue;
+    /* background: lightblue; */
+    justify-content: center;
 }
 
 .slide {
