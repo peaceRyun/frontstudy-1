@@ -1,0 +1,135 @@
+/* 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #222328;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* 공통 스타일 */
+.blind {
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#wrap {
+    width: 1200px;
+    /* background: lightgray; */
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#gnb {
+    display: flex;
+    gap: 50px;
+}
+
+#gnb dd {
+    display: none;
+}
+
+#gnb dt a {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: lightblue;
+}
+
+.slide {
+    overflow: hidden;
+}
+
+.slide ul {
+    display: flex;
+}
+
+.slide img {
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding-top: 20px;
+}
+
+main section {
+    width: 30%;
+}
+
+section .tit {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.list-bbs a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%;
+    padding: 5px 0px;
+    text-overflow: ellipsis;
+    /* color: red; */
+}
+
+.list-bbs li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.list-bbs li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    display: block;
+}
+
+.bnr {
+    width: 100%;
+}
+
+.list-goto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    row-gap: 22px;
+}
+
+.list-goto li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    background: yellow;
+}
+
+footer {
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+footer .logo {
+    font-size: 20px;
+}
+
+footer address {
+    font-style: normal;
+}
