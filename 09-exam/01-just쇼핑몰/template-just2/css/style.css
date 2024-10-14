@@ -58,7 +58,9 @@ header {
     min-width: 125px;
 }
 
-/* #gnb dl:hover dd 각 메뉴의 depth2만 열림 */
+/* 마우스 오버한 dl의 depth2만 열림 */
+/* #gnb dl:hover dd */
+
 /* 모든 depth2가 열림 */
 #gnb:hover dl dd {
     display: block;
