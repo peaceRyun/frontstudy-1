@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js-scrolling | js</title>
+    </head>
+    <body>
+        <h1>js</h1>
+        <h2>js-scrolling</h2>
+        <div class="item">아이템</div>
+        <style>
+            body {
+                height: 200vh;
+                overflow-x: hidden;
+            }
+            .item {
+                position: absolute;
+                top: 200px;
+                left: 10px;
+                /* transform: translate(-50%); */
+                height: 300px;
+                width: 300px;
+                background-color: tomato;
+            }
+        </style>
+        <script>
+            const item = document.querySelector('.item');
+
+            // // item 의 배경색을 lightblue로 변경
+            // item.style.backgroundColor = 'lightblue';
+            // item.style.fontSize = '3rem';
+
+            // // x, y 좌표를 100, 100으로 이동
+            // // scale 1.5배
+            // // rotate 45도
+            // item.style.transform = 'translate(100px, 100px) scale(1.5) rotate(45deg)';
+
+            // // 스크롤 이벤트
+            // // 윈도우를 스크롤 했을 때
+            window.addEventListener('scroll', function () {
+                const scrolled = window.scrollY;
+
+                console.log('scroll');
+                // 옛날 방법
+                console.log('스크롤 값 : ' + scrolled + 'px');
+                // es6 버전(개편)(백틱)
+                console.log(`스크롤 값 : ${scrolled}px`);
+
+                // .item 요소의 background-color 를 lightblue로 변경
+                item.style.backgroundColor = 'lightblue';
+                // 스크롤 시, .item 요소의 left 값을 100px로 변경
+                item.style.left = `${10 + scrolled}px`;
+                item.style.top = `${200 + scrolled}px`;
+                item.style.transform = `scale(${scrolled * 0.005}) rotate(${scrolled * 0.3}deg)`;
+            });
+        </script>
+    </body>
+</html>

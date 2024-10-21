@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>aos-scrolling | js</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    </head>
+    <body>
+        <h1>js</h1>
+        <h2>aos-scrolling</h2>
+        <div class="container">
+            <div class="space">aos 실습</div>
+            <div class="item" data-aos="fade-up" data-aos-offset="500">item1</div>
+            <div class="item" data-aos="fade-down" data-aos-delay="300">item2</div>
+
+            <section id="section" class="space">
+                <div
+                    class="circle"
+                    data-aos="fade-right"
+                    data-aos-anchor="#section"
+                    data-aos-anchor-placement="top-center"
+                    data-aos-once="false"
+                >
+                    circle
+                </div>
+            </section>
+        </div>
+        <script>
+            AOS.init({
+                once: true,
+                offset: 500,
+            });
+        </script>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                min-height: 200vh;
+            }
+            .space {
+                width: 100%;
+                height: 100vh;
+                background-color: coral;
+            }
+            .item {
+                height: 200px;
+                width: 200px;
+                background-color: lightblue;
+            }
+            .circle {
+                position: fixed;
+                background-color: blue;
+                border-radius: 50%;
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+    </body>
+</html>
