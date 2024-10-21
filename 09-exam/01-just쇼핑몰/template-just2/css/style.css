@@ -103,10 +103,44 @@ header {
 
 .slide {
     overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+
+@keyframes ani-ul {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    10% {
+        left: 0;
+    }
+    20% {
+        left: -100%;
+    }
+    30% {
+        left: -100%;
+    }
+    40% {
+        left: -200%;
+    }
+    50% {
+        left: -200%;
+    }
+    60% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 .slide ul {
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ani-ul 12s alternate infinite;
 }
 
 .slide img {
