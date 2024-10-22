@@ -1,6 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .wrap {
   position: relative;
   height: 100vh;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #536493;
+}
+.intro .txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  letter-spacing: -5px;
 }
 
 .box {
@@ -11,13 +36,38 @@
 }
 
 .green {
-  background-color: green;
+  background-color: #88c273;
 }
 
 .orange {
-  background-color: orange;
+  background-color: #fff1db;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #d4bdac;
+}
+
+section {
+  height: 100vh;
+}
+
+.bg-gray {
+  background-color: #f5f5f5;
+}
+
+.sec-grow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 0;
+  background: #d4bdac;
+  text-align: center;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
