@@ -38,3 +38,26 @@ gsap.to('.grow', {
     },
     delay: 1,
 });
+
+// header
+// 윈도우가 스크롤 됐을 떄
+// window.addEventListener(이벤트, 함수);
+window.addEventListener(
+    'scroll',
+    _.throttle(function () {
+        const scrolled = window.scrollY;
+        console.log(`스크롤 값 : ${scrolled}`);
+        // 만약 y축 스크롤 값(scrolled)이 80보다 크다면
+        if (scrolled > 80) {
+            // 참일 때 실행할 코드
+            // header를 없애고
+            gsap.to('#header', { yPercent: -100, duration: 0.3 });
+            gsap.to('#to-top', { x: -70, duration: 0.3 });
+        } else {
+            //  거짓일 때 실행할 코드
+            // header를 나타나게 한다.
+            gsap.to('#header', { yPercent: 0, duration: 0.3 });
+            gsap.to('#to-top', { x: 0, duration: 0.3 });
+        }
+    })
+);

@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="./css/style.css" />
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
         <script defer src="./js/gsap.js"></script>
     </head>
     <body>
         <div id="wrap">
-            <header>header</header>
+            <header id="header">header</header>
             <div class="intro">
                 <div class="box-cont">
                     <div class="box green"></div>
@@ -28,7 +29,9 @@
                 <section class="bg-gray"></section>
                 <section></section>
             </main>
-            <footer>footer</footer>
+            <footer>
+                <button id="to-top">Top</button>
+            </footer>
         </div>
     </body>
 </html>
