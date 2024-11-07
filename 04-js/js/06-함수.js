@@ -66,3 +66,35 @@ function getSecond([, b = '없음']) {
 }
 
 getSecond(animals);
+
+// rest 매개변수
+function print(...num) {
+    console.log(num);
+}
+print(1, 2, 3, 4, 5);
+
+// 화살표 함수
+function helloA() {}
+helloA();
+
+const hello3 = function () {};
+hello3();
+
+const hello4 = () => {
+    console.log('hello4');
+};
+hello4();
+
+// 화살표 함수의 축약형
+const a = () => {};
+const b = (x) => {}; //prettier가 붙여주기는 하지만, x 의 괄호는 없어도 된다.
+const c = (x, y) => {};
+const d = (x, y) => x + y; //중괄호와 return을 생략 가능함
+const e = (x, y) => {
+    console.log('hello');
+    return x + y;
+}; //앞쪽에 무언가 있다면(console.log~) 생략 못함
+const f = () => ({
+    name: '윈터',
+}); //객체의 중괄호인지, 함수의 중괄호인지 헷갈리기 때문에, 소괄호로 한번 묶어준다.
+const g = () => [1, 2, 3];
