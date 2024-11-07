@@ -104,3 +104,90 @@ function header(type) {
     }
 }
 console.log(header('type1'));
+console.log(header('type2'));
+
+// if 문으로 변경
+function header2(type) {
+    if (type === 'type1') return '타입1 header 출력';
+    if (type === 'type2') return '타입2 header 출력';
+    return '타입3 header 출력';
+}
+
+console.log(header2('type1'));
+console.log(header2('type2'));
+console.log(header2('type3'));
+
+// 반복문
+// for문
+// for(초기값; 조건; 증감) {실행문}
+
+// 콘솔창에 0부터 9까지 출력
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+// 9부터 0까지 출력
+for (let i = 9; i > -1; i--) {
+    console.log(i);
+}
+
+// 9부터 2단위로 줄어들면서 출력
+for (let i = 9; i > -1; i -= 2) {
+    console.log(i);
+}
+
+// break 조건 추가
+for (let i = 9; i > -1; i -= 2) {
+    if (i < 4) {
+        break;
+    }
+
+    console.log(i);
+}
+// continure 문(하단에 있는 코드를 건너띤다.)
+for (let i = 9; i > 0; i--) {
+    if (i % 2 === 0) {
+        continue;
+    }
+
+    console.log(`i : ${i}`);
+}
+
+// for of문 (배열)
+const animals = ['dog', 'cat', 'turtle'];
+
+for (let animal of animals) {
+    console.log(`내가 좋아하는 동물은 ${animal}`);
+}
+
+// for in 문
+const user3 = {
+    name: 'Winter',
+    age: 2,
+    city: 'Seoul',
+};
+
+for (let key in user3) {
+    console.log(key); //name, age, city
+    console.log(user3[key]); //name, age, city
+}
+
+// while문
+// while (조건) {실행문}
+let i = 1;
+let sum = 0;
+
+while (i <= 10) {
+    sum += i;
+    i++;
+}
+
+console.log(sum);
+
+// do while 문
+
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 10);
