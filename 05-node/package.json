@@ -1,0 +1,14 @@
+{
+    "name": "nodejs",
+    "version": "1.0.0",
+    "description": "노드 공부하고 있음",
+    "scripts": {
+        "dev": "parcel ./index.html",
+        "build": "parcel build ./index.html"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "parcel": "^2.12.0"
+    }
+}

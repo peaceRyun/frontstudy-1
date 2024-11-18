@@ -98,3 +98,8 @@ const f = () => ({
     name: '윈터',
 }); //객체의 중괄호인지, 함수의 중괄호인지 헷갈리기 때문에, 소괄호로 한번 묶어준다.
 const g = () => [1, 2, 3];
+
+const ani = { cat: 'cat', fish: 'fish', dog: 'dog' };
+const o = 1;
+
+console.log(0, ani);
