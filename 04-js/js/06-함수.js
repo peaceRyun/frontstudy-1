@@ -103,3 +103,75 @@ const ani = { cat: 'cat', fish: 'fish', dog: 'dog' };
 const o = 1;
 
 console.log(0, ani);
+
+// 3초 후에 콘솔창
+
+const setTime = setTimeout(() => {
+    console.log('3초 됐다! 해피 크리스마스~~');
+}, 3000);
+
+const stopBtn = document.querySelector('.stop');
+stopBtn.addEventListener('click', () => {
+    console.log('취소되었습니다.');
+    clearTimeout(setTime);
+});
+
+// setInterval
+const setInt = setInterval(() => {
+    console.log('축하축하');
+}, 3000);
+
+const stopBtn2 = document.querySelector('.stop2');
+stopBtn2.addEventListener('click', () => {
+    console.log('"축하축하"가 취소되었습니다.');
+    clearInterval(setInt);
+});
+
+// 콜백 함수
+// 원하는 시점에 호출할 수 있도록 하는 함수
+
+const a11 = (cb) => {
+    cb();
+    console.log('a');
+};
+const b11 = () => {
+    console.log('b');
+};
+
+a11(b11);
+b11();
+
+// this
+
+// 일반 함수 this
+// 일반 함수는 호출 위치에서 this가 결정된다.
+// 화살표 함수는 자신이 선언된 함수 범위에서 this가 결정된다.
+
+function userss() {
+    this.firstName = '윈터';
+    this.lastName = '이';
+
+    return {
+        getFullName: () => {
+            return `${this.lastName}${this.firstName}`;
+        },
+    };
+}
+
+const user2 = userss();
+console.log(user2.getFullName());
+
+const obj1 = {
+    firstName: '윈터',
+    lastName: '김',
+
+    // 메서드
+    // fullName: function () {
+    //     return `${this.lastName}${this.firstName}`;
+    // },
+    fullName() {
+        return `${this.lastName}${this.firstName}`;
+    },
+};
+
+console.log(obj1.fullName());

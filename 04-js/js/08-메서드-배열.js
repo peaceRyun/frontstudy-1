@@ -48,3 +48,39 @@ const list = ['list1', 'list2', 'list3'];
 list.forEach((item) => {
     console.log(item);
 });
+
+const animals = ['Cat', 'Dog', 'Fish'];
+// const animals2 = {animals.map((item,index) => ())}
+
+console.log(animals.includes('cat'));
+console.log(animals.includes('코뿔소'));
+
+console.log(animals.join(' 그리고 '));
+
+users.map(function (item) {
+    console.log(item);
+});
+
+const newUsers = users.map((item) => {
+    return { ...item, email: null };
+});
+
+console.log(newUsers);
+console.log(arr.pop());
+
+console.log(arr.push(4, 5, 6));
+console.log(arr);
+
+// 총 나이 합계 (reduce)
+const totalAge = users.reduce(function (total, currentValue) {
+    return total + currentValue.age;
+}, 0);
+
+console.log(totalAge);
+
+// 평균 나이 구하기
+const avgAge = totalAge / users.length;
+console.log(avgAge.toFixed());
+
+const arr2 = [1, 2, 3, 4, 5];
+console.log(arr2.slice(0, 3));
